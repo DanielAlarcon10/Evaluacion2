@@ -47,6 +47,10 @@ public class Prestamos_act extends AppCompatActivity {
         int AxelAut = saldo.getSaldoAxel() + saldo.getValorAutomotriz();
         int RoxHip = saldo.getSaldoRoxana() + saldo.getValorHipotecario();
         int RoxAut = saldo.getSaldoRoxana() + saldo.getValorAutomotriz();
+        int BetHip = saldo.getSaldoBetzabe() + saldo.getValorHipotecario();
+        int BetAut = saldo.getSaldoBetzabe() + saldo.getValorAutomotriz();
+        int MatHip= saldo.getSaldoMatias() + saldo.getValorHipotecario();
+        int MatAut= saldo.getSaldoMatias() + saldo.getValorAutomotriz();
 
         if(cliente.equals("Axel") && prestamos.equals("Credito Hipotecario"))
         {
@@ -68,6 +72,26 @@ public class Prestamos_act extends AppCompatActivity {
             text.setText("Su nuevo saldo es: "+ RoxAut);
         }
 
+        if(cliente.equals("Betzabe") && prestamos.equals("Credito Hipotecario"))
+        {
+            text.setText("Su nuevo saldo es: "+ BetHip);
+        }
+
+        if(cliente.equals("Betzabe") && prestamos.equals("Credito Automotriz"))
+        {
+            text.setText("Su nuevo saldo es: "+ BetAut);
+        }
+
+        if(cliente.equals("Matias") && prestamos.equals("Credito Hipotecario"))
+        {
+            text.setText("Su nuevo saldo es: "+ MatHip);
+        }
+
+        if(cliente.equals("Matias") && prestamos.equals("Credito Automotriz"))
+        {
+            text.setText("Su nuevo saldo es: "+ MatAut);
+        }
+
     }
 
     public void deudas(View v)
@@ -85,6 +109,14 @@ public class Prestamos_act extends AppCompatActivity {
         int RoxHipCuota = RoxHipDeuda / deuda.getDeudaHipotecario();
         int RoxAutDeuda = deuda.getSaldoRoxana() + deuda.getValorAutomotriz();
         int RoxAutCuota = RoxAutDeuda / deuda.getDeudaAutomotriz();
+        int BetHipDeuda = deuda.getSaldoBetzabe() + deuda.getValorHipotecario();
+        int BetHipCuota = BetHipDeuda / deuda.getDeudaHipotecario();
+        int BetAutDeuda = deuda.getSaldoBetzabe() + deuda.getValorAutomotriz();
+        int BetAutCuota = BetAutDeuda / deuda.getDeudaAutomotriz();
+        int MatHipDeuda = deuda.getSaldoMatias() + deuda.getValorHipotecario();
+        int MatHipCuota = MatHipDeuda / deuda.getDeudaHipotecario();
+        int MatAutDeuda = deuda.getSaldoMatias() + deuda.getValorAutomotriz();
+        int MatAutCuota = MatAutDeuda / deuda.getDeudaAutomotriz();
 
         if(cliente.equals("Axel") && prestamos.equals("Credito Hipotecario"))
         {
@@ -104,6 +136,26 @@ public class Prestamos_act extends AppCompatActivity {
         if(cliente.equals("Roxana") && prestamos.equals("Credito Automotriz"))
         {
             text.setText("Su deuda es de: "+ RoxAutCuota);
+        }
+
+        if(cliente.equals("Betzabe") && prestamos.equals("Credito Hipotecario"))
+        {
+            text.setText("Su deuda es de: "+ BetHipCuota);
+        }
+
+        if(cliente.equals("Betzabe") && prestamos.equals("Credito Automotriz"))
+        {
+            text.setText("Su deuda es de: "+ BetAutCuota);
+        }
+
+        if(cliente.equals("Matias") && prestamos.equals("Credito Hipotecario"))
+        {
+            text.setText("Su deuda es de: "+ MatHipCuota);
+        }
+
+        if(cliente.equals("Matias") && prestamos.equals("Credito Automotriz"))
+        {
+            text.setText("Su deuda es de: "+ MatAutCuota);
         }
 
 
